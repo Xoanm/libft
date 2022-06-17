@@ -13,24 +13,22 @@
 #include <ctype.h>
 #include <stdio.h>
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9'))
+	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') ||
+				(c >= '0' && c <= '9'))
 		return (1);
-	else
-		return (0);
+	return (0);
 }
 
 int	main(void)
 {
 	char	c;
-	int ret;
+	int		ret;
 
 	c = '9';
 	ret = ft_isalnum(c);
 	printf("%d", ret);
-
 	ret = isalnum(c);
 	printf("%d", ret);
 	return (0);

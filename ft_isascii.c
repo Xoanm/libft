@@ -13,9 +13,8 @@
 #include <ctype.h>
 #include <stdio.h>
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-
 	if (c >= 0 && c <= 177)
 		return (1);
 	else
@@ -25,14 +24,12 @@ int ft_isascii(int c)
 int	main(void)
 {
 	char	c;
-	int ret;
+	int		ret;
 
 	c = '=';
 	ret = ft_isascii(c);
 	printf("%d", ret);
-
 	ret = isascii(c);
 	printf("%d", ret);
 	return (0);
 }
-
