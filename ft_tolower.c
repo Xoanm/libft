@@ -10,4 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <ctype.h>
+#include <stdio.h>
 
+int	ft_tolower(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+return (c);
+}
+
+int	main(void)
+{
+	char	c;
+	int		ret;
+
+	c = 'R';
+	ret = ft_tolower(c);
+	printf("%c\n", ret);
+	ret = tolower(c);
+	printf("%c\n", ret);
+	return (0);
+}
