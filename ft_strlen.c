@@ -10,4 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
+#include <stdio.h>
+
+int ft_strlen(const char *s)
+{
+	int i;
+
+	i = 0;
+	while(s[i] != '\0')
+		i++;
+	return (i);
+}
+
+int	main(void)
+{
+	char	c[] = "hola";
+	int		ret;
+
+	ret = ft_strlen(c);
+	printf("%d\n", ret);
+	ret = strlen(c);
+	printf("%d\n", ret);
+	return (0);
+}
 
