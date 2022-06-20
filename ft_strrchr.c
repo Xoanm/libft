@@ -10,4 +10,34 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
+#include <stdio.h>
 
+char *ft_strchr(const char *s, int c)
+{
+    unsigned int i;
+
+    i = 0;
+    if(s[i] == '\0')
+        return (0);
+
+    while(s[i] != '\0')
+			i++;
+	while(s[i] >= 0)
+        {
+            if(s[i] == c)
+                return (&((char *) s)[i]);
+            i--;
+        }
+    return (0);
+}
+
+int    main(void)
+{
+	char    s[] = "a";
+
+	printf("%s\n", ft_strchr(s, 'a'));
+	printf("%s\n", strchr(s, 'a'));
+    return (0);
+
+}
