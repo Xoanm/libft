@@ -10,4 +10,34 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
+#include <stdio.h>
 
+int	ft_atoi(const char *str)
+{
+	int	i;
+	int sign;
+	int	result;
+
+	i = 0;
+	sign = 1;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
+		i++;
+	if(str[i] == '-')
+		sign = -1;
+	while (str[i] >= 0 && str[i] <= 9)
+	{
+		result = str[i] - '0';
+		i++;
+	}	
+	return(sign * result);
+}
+
+int	main(void)
+{
+	char	c[] = "   -124";
+
+	printf("%d\n", ft_atoi(c));
+	printf("%d\n", atoi(c));
+	return (0);
+}
