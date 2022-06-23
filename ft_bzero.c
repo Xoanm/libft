@@ -11,18 +11,27 @@
 /* ************************************************************************** */
 
 #include <strings.h>
+#include <stdlib.h>
 #include <stdio.h>
 
-void    bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
+	size_t			i;
+	unsigned char	*str;
 
+	i = 0;
+	str = (unsigned char *)s;
+	while (i < n)
+	{
+		str[i] = 0;
+		i++;
+	}
+	s = str;
 }
 
 int	main(void)
 {
 	char	c[] = "hola que tal";
-
-	printf("%d\n", bzero(c));
-	printf("%d\n", ft_bzero(c));
+	ft_bzero(c, 5);
 	return (0);
 }
