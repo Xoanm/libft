@@ -10,4 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <strings.h>
+#include <stdio.h>
 
+void    bzero(void *s, size_t n)
+{
+
+}
+
+int	main(void)
+{
+	char	c[] = "hola que tal";
+
+	printf("%d\n", bzero(c));
+	printf("%d\n", ft_bzero(c));
+	return (0);
+}
