@@ -10,4 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
+int	main(void)
+{
+	char src[] = "juancarlos";
+	char dst[] = "Hola que tal como estás";
+
+	strlcpy(dst, src, 18);
+	printf("%s\n", dst);
+	printf("%s\n", src);
+	printf("%lu\n", strlcpy(dst, src, 18));
+	return (0);
+}
