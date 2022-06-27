@@ -10,9 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <strings.h>
-#include <stdlib.h>
-#include <stdio.h>
+//#include <strings.h>
+//#include <stdlib.h>
+//#include <stdio.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
@@ -28,10 +29,10 @@ void	ft_bzero(void *s, size_t n)
 	}
 	s = str;
 }
-
+/*
 int	main(void)
 {
 	char	c[] = "hola que tal";
 	ft_bzero(c, 5);
 	return (0);
-}
+}*/

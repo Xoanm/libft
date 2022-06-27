@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+//#include <ctype.h>
+//#include <stdio.h>
 #include "libft.h"
 
 int	ft_isprint(int c)
@@ -20,7 +20,7 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
-
+/*
 int	main(void)
 {
 	char	c;
@@ -32,4 +32,4 @@ int	main(void)
 	ret = isprint(c);
 	printf("%d", ret);
 	return (0);
-}
+}*/

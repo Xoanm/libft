@@ -6,32 +6,32 @@
 /*   By: jumorcil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 15:30:20 by jumorcil          #+#    #+#             */
-/*   Updated: 2022/06/17 15:30:22 by jumorcil         ###   ########.fr       */
+/*   Updated: 2022/06/27 21:50:13 by jumorcil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+//#include <string.h>
+//#include <stdio.h>
+#include "libft.h"
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    unsigned int i;
+	unsigned int	i;
 
-    i = 0;
-    if(s[i] == '\0')
-        return (0);
-
-    while(s[i] != '\0')
-			i++;
-	while(s[i] >= 0)
-        {
-            if(s[i] == c)
-                return (&((char *) s)[i]);
-            i--;
-        }
-    return (0);
+	i = 0;
+	if (s[i] == '\0')
+		return (0);
+	while (s[i] != '\0')
+		i++;
+	while (s[i] >= 0)
+	{
+		if (s[i] == c)
+			return (&((char *) s)[i]);
+		i--;
+	}
+	return (0);
 }
-
+/*
 int    main(void)
 {
 	char    s[] = "a";
@@ -40,4 +40,4 @@ int    main(void)
 	printf("%s\n", strchr(s, 'a'));
     return (0);
 
-}
+}*/

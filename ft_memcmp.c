@@ -6,17 +6,18 @@
 /*   By: jumorcil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 15:27:37 by jumorcil          #+#    #+#             */
-/*   Updated: 2022/06/17 15:27:39 by jumorcil         ###   ########.fr       */
+/*   Updated: 2022/06/27 21:43:06 by jumorcil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
+#include "libft.h"
 
 int	ft_memcmp(const void	*s1, const	void *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*str1;
 	unsigned char	*str2;
 
@@ -31,7 +32,7 @@ int	ft_memcmp(const void	*s1, const	void *s2, size_t n)
 	}	
 	return (0);
 }
-
+/*
 int	main(void)
 {
 	char	s1[] = "622";
@@ -40,4 +41,4 @@ int	main(void)
 	printf("%d\n", memcmp(s1, s2, 20));
 	printf("%d\n", ft_memcmp(s1, s2, 20));
 	return (0);
-}
+}*/

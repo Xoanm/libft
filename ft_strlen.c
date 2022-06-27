@@ -6,23 +6,25 @@
 /*   By: jumorcil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 15:29:44 by jumorcil          #+#    #+#             */
-/*   Updated: 2022/06/17 15:29:46 by jumorcil         ###   ########.fr       */
+/*   Updated: 2022/06/27 21:44:59 by jumorcil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+//#include <string.h>
+//#include <stdio.h>
+#include "libft.h"
 
-int ft_strlen(const char *s)
+int	ft_strlen(const char *s)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 		i++;
 	return (i);
 }
 
+/*
 int	main(void)
 {
 	char	c[] = "hola";
@@ -33,5 +35,4 @@ int	main(void)
 	ret = strlen(c);
 	printf("%d\n", ret);
 	return (0);
-}
-
+}*/

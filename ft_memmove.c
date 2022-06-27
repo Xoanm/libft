@@ -6,13 +6,14 @@
 /*   By: jumorcil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 19:12:10 by jumorcil          #+#    #+#             */
-/*   Updated: 2022/06/23 19:12:14 by jumorcil         ###   ########.fr       */
+/*   Updated: 2022/06/27 21:37:46 by jumorcil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <string.h>
+#include "libft.h"
 
 void	*ft_memmove(void *s1, const void *s2, size_t n)
 {
@@ -28,7 +29,7 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 	}
 	return (s1);
 }
-
+/*
 int	main(void)
 {
 	char str1[] = "123456789";
@@ -40,5 +41,4 @@ int	main(void)
 	printf("%s\n", str1);
 	printf("%s\n", ft_memmove(s1 + 1, s2, 5));
 	return (0);
-}
-
+}*/
