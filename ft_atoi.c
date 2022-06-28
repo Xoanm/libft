@@ -22,15 +22,18 @@ int	ft_atoi(const char *str)
 
 	i = 0;
 	sign = 1;
+	result = 0;
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == ' ')
 		i++;
 	if (str[i] == '-')
-		sign = -1;
-	if (str[i] >= 48 && str[i] <= 57 && str[i] != '\0')
 	{
-		result = str[i] - 48;
+		sign = -1;
 		i++;
+		if (str[i] == '+')
+			return (0);
 	}
+	if (str[i] == '+')
+		i++;
 	while (str[i] >= 48 && str[i] <= 57 && str[i] != '\0')
 	{
 		result = (result * 10) + (str[i] - 48);
@@ -41,7 +44,7 @@ int	ft_atoi(const char *str)
 }
 /*int	main(void)
 {
-	char	c[] = "   324";
+	char	c[] = "+-48";
 
 	printf("%d\n", ft_atoi(c));
 	printf("%d\n", atoi(c));

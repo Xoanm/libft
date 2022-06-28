@@ -20,27 +20,26 @@ char	*ft_strchr(const char *s, int c)
 
 	i = 0;
 	if (s[i] == '\0')
-		return (0);
-	while (s[i] != '\0')
+		return ((char *)s);
+	while (s[i] != 0)
 	{
 		if (s[i] == c)
 			return (&((char *) s)[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
-/*
-int    main(void)
+
+/*int    main(void)
 {
-	int ret;
-	char    s[] = "";
+	char    s[] = "tripouille";
 
-	printf("%s\n", ft_strchr(s, 'a'));
-	printf("%s\n", strchr(s, 'a'));
-	ret = ft_strchr(s, 'a');
-    printf("%d\n", ret);
-    ret = strchr(s, 'a');
-    printf("%d\n", ret);
+	printf("01 %s\n", ft_strchr(s, 't'));
+
+	printf("1 %s\n", ft_strchr(s, 't'));// == s)
+	printf("2 %s\n", ft_strchr(s, 'l'));// == s + 7)
+	printf("3 %s\n",ft_strchr(s, 'z'));// == 0)
+	printf("4 %s\n",ft_strchr(s, 0));// == s + strlen(s))
+	printf("5 %s\n",ft_strchr(s, 't' + 256));// == s)
     return (0);
-
 }*/

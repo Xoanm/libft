@@ -16,7 +16,7 @@
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 177)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }
@@ -26,10 +26,10 @@ int	main(void)
 	char	c;
 	int		ret;
 
-	c = '=';
+	c = '1';
 	ret = ft_isascii(c);
-	printf("%d", ret);
+	printf("%d\n", ret);
 	ret = isascii(c);
-	printf("%d", ret);
+	printf("%d\n", ret);
 	return (0);
 }*/
