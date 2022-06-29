@@ -16,30 +16,35 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	unsigned int	i;
+    char    *str;
 
-	i = 0;
-	if (s[i] == '\0')
-		return ((char *)s);
-	while (s[i] != 0)
-	{
-		if (s[i] == c)
-			return (&((char *) s)[i]);
-		i++;
-	}
-	return (NULL);
+    str = (char *)s;
+    while (*str != c)
+    {
+        if (*str == '\0')
+        {
+            return (NULL);
+        }
+        str++;
+    }
+    return (str);
 }
-
-/*int    main(void)
+/*
+int    main(void)
 {
-	char    s[] = "tripouille";
+	char    s[] = "bonjour";
 
-	printf("01 %s\n", ft_strchr(s, 't'));
-
+	printf("01 %s\n", ft_strchr(s, 'b'));
+	printf("01 %s\n", strchr(s, 'b'));
 	printf("1 %s\n", ft_strchr(s, 't'));// == s)
-	printf("2 %s\n", ft_strchr(s, 'l'));// == s + 7)
-	printf("3 %s\n",ft_strchr(s, 'z'));// == 0)
-	printf("4 %s\n",ft_strchr(s, 0));// == s + strlen(s))
-	printf("5 %s\n",ft_strchr(s, 't' + 256));// == s)
+	printf("1 %s\n", strchr(s, 't'));
+	printf("2 %s\n", ft_strchr(s, 'j'));// == s + 7)
+	printf("2 %s\n", strchr(s, 'j'));
+	printf("3 %s\n", ft_strchr(s, 'z'));// == 0)
+	printf("3 %s\n", strchr(s, 'z'));
+	printf("4 %s\n", ft_strchr(s, 0));// == s + strlen(s))
+	printf("4 %s\n", strchr(s, 0));
+	printf("5 %s\n", ft_strchr(s, 't' + 256));// == s)
+	printf("5 %s\n", 	strchr(s, 't' + 256));
     return (0);
 }*/
