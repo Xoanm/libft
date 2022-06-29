@@ -19,7 +19,7 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 {
 	int	i;
 
-	i = ((int)n) - 1;
+	i = ((int)n - 1);
 	if (!s1 && !s2)
 		return (NULL);
 	while (i >= 0)

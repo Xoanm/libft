@@ -6,7 +6,7 @@
 /*   By: jumorcil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 15:28:37 by jumorcil          #+#    #+#             */
-/*   Updated: 2022/06/27 21:47:24 by jumorcil         ###   ########.fr       */
+/*   Updated: 2022/06/29 15:53:29 by jumorcil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-    char    *str;
+	char	*str;
 
-    str = (char *)s;
-    while (*str != c)
-    {
-        if (*str == '\0')
-        {
-            return (NULL);
-        }
-        str++;
-    }
-    return (str);
+	str = (char *)s;
+	while (*str != c)
+	{
+		if (*str == '\0')
+			return (NULL);
+		str++;
+	}
+	return (str);
 }
 /*
 int    main(void)
