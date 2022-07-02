@@ -5,46 +5,53 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jumorcil <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/17 15:29:28 by jumorcil          #+#    #+#             */
-/*   Updated: 2022/06/17 15:29:30 by jumorcil         ###   ########.fr       */
+/*   Created: 2022/07/02 09:40:18 by jumorcil          #+#    #+#             */
+/*   Updated: 2022/07/02 09:40:23 by jumorcil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-//#include <string.h>
-//#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	int	destlen;
-	int srclen;
-	
-	destlen = ft_strlen(dst);
-	srclen = ft_strlen(src);
-	printf("tamaño orgien: %d\n", ft_strlen(dst));
-	printf("tamaño orgien: %d\n", ft_strlen(src));
-}
+	size_t	srcsize;
+	size_t	i;
 
-int	ft_strlen(const char *s)
-{
-	int	i;
-
+	if (!dst || !src)
+		return (0);
+	srcsize = ft_strlen(src);
 	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
+	if (dstsize != 0)
+	{
+		while (src[i] != '\0' && i < (dstsize - 1))
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
+	}
+	return (srcsize);
 }
-
-
-int	main(void)
+/*
+int main(void)
 {
-	char src[] = "juancarlos";
-	char dst[] = "Hola que tal como estás";
-
-	strlcpy(dst, src, 18);
-	printf("%s\n", dst);
-	printf("%s\n", src);
-	//printf("%lu\n", strlcpy(dst, src, 18));
-	return (0);
-}
+	char dest[] = "Hello there, Venus";
+	char source[] = "juan";
+	printf("\nresult:  %zu", ft_strlcpy(dest, source, 19));
+	//test(19);
+	char dest1[] = "Hello there, Venus";
+	char source1[] = "juan";
+	printf("\nresult:  %zu", ft_strlcpy(dest1, source1, 10));
+    //test(10);
+	char dest2[] = "Hello there, Venus";
+	char source2[] = "juan";
+	printf("\nresult:  %zu", ft_strlcpy(dest2, source2, 1));
+    //test(1);
+	char dest3[] = "Hello there, Venus";
+	char source3[] = "juan";
+	printf("\nresult:  %zu", ft_strlcpy(dest3, source3, 0));
+    //test(0);
+    return(0);
+}*/
