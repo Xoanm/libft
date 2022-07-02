@@ -18,10 +18,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstn)
 {
 	size_t	i;
 	size_t	x;
+	size_t	dstlen;
+	size_t	srclen;
 
-	if (dstn <= strlen(dst))
-		return (dstn + strlen(src));
-	i = strlen(dst);
+	dstlen = ft_strlen(dst);
+	srclen = ft_strlen(src);
+
+	if (dstn <= dstlen)
+		return (dstn + srclen);
+	i = dstlen;
 	x = 0;
 	while (src[x] != '\0' && i + 1 < dstn)
 	{
@@ -30,9 +35,20 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstn)
 		x++;
 	}
 	dst[i] = '\0';
-	return (strlen(dst) + ft_strlen(&src[x]));
+	return (dstlen + srclen);
 }
 /*
+int	ft_strlen(const char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+
+
 int main(void)
 {
 	char dest[] = "Hello there, Venus";

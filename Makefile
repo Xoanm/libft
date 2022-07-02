@@ -30,6 +30,8 @@ SRCS	=	ft_isascii.c\
 			ft_isalpha.c\
 			ft_memcmp.c\
 			ft_substr.c\
+			ft_strlcpy.c\
+			ft_strlcat.c\
 
 LIB		=	libft.h
 OBJS	=	${SRCS:.c=.o}

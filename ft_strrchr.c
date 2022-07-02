@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <string.h>
-//#include <stdio.h>
+#include <string.h>
+#include <stdio.h>
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	unsigned int	i;
 
@@ -36,8 +36,8 @@ int    main(void)
 {
 	char    s[] = "a";
 
-	printf("%s\n", ft_strchr(s, 'a'));
-	printf("%s\n", strchr(s, 'a'));
+	printf("%s\n", ft_strrchr(s, 'a'));
+	printf("%s\n", strrchr(s, 'a'));
     return (0);
-
-}*/
+}
+*/
