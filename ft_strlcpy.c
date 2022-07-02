@@ -15,6 +15,28 @@
 //#include <stdlib.h>
 #include "libft.h"
 
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+{
+	int	destlen;
+	int srclen;
+	
+	destlen = ft_strlen(dst);
+	srclen = ft_strlen(src);
+	printf("tamaño orgien: %d\n", ft_strlen(dst));
+	printf("tamaño orgien: %d\n", ft_strlen(src));
+}
+
+int	ft_strlen(const char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+
+
 int	main(void)
 {
 	char src[] = "juancarlos";
@@ -23,6 +45,6 @@ int	main(void)
 	strlcpy(dst, src, 18);
 	printf("%s\n", dst);
 	printf("%s\n", src);
-	printf("%lu\n", strlcpy(dst, src, 18));
+	//printf("%lu\n", strlcpy(dst, src, 18));
 	return (0);
 }
