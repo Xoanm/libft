@@ -10,20 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
+	if (ft_strlen(s) == 0 && c == '\0')
+		return((char *)s);
 	if (s[i] == '\0')
-		return (0);
+		return (NULL);
 	while (s[i] != '\0')
 		i++;
-	while (s[i] >= 0)
+	while (i >= 0)
 	{
 		if (s[i] == c)
 			return (&((char *) s)[i]);
@@ -34,10 +34,9 @@ char	*ft_strrchr(const char *s, int c)
 /*
 int    main(void)
 {
-	char    s[] = "a";
+	char    s[] = "";
 
-	printf("%s\n", ft_strrchr(s, 'a'));
-	printf("%s\n", strrchr(s, 'a'));
+	printf("%s\n", strrchr(s, '\0'));
+	printf("%s\n", ft_strrchr(s, '\0'));
     return (0);
-}
-*/
+}*/

@@ -29,21 +29,19 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 	}
 	return (s1);
 }
-
-/*int	main(void)
+/*
+int	main(void)
 {
-	char str1[] = "lorem ipsum dolor sit amet";
-	char str2[] = "abcdefghijklm";
-	char *s1 = str1;
-	char *s2 = str2;
+	char src[] = "lorem ipsum dolor sit amet";
+	char *dst;
 
-	printf("  %s\n", str1);
-	printf("%s\n", memmove(s1 + 1, s2, 22));
-	char str3[] = "lorem ipsum dolor sit amet";
-	char str4[] = "abcdefghijklm";
-	char *s3 = str1;
-	char *s4 = str2;
-	printf("  %s\n", str3);
-	printf("%s\n", ft_memmove(s3 + 1, s4, 22));
+	dst = src + 3;
+
+	printf("%s\n", memmove(src, dst, 4));
+	printf("%s\n\n", ft_memmove(src, dst, 4));
+	dst = src + 3;
+	printf("%s\n", memmove(src, dst, 4));
+	printf("%s\n", ft_memmove(src, dst, 4));
 	return (0);
-}*/
+}
+*/
