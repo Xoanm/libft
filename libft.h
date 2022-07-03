@@ -33,6 +33,7 @@ int		ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *bigstr, const char *shortstr, size_t len);
+int	strncmp(const char *str1, const char *str2, size_t len);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstn);
 int		ft_tolower(int c);
