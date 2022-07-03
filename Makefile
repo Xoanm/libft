@@ -24,6 +24,7 @@ SRCS	=	ft_isascii.c\
 			ft_memset.c\
 			ft_lstnew.c\
 			ft_strchr.c\
+			ft_strnstr.c\
 			ft_isalnum.c\
 			ft_memchr.c\
 			ft_strrchr.c\
