@@ -14,13 +14,13 @@
 
 char	*ft_strnstr(const char *bigstr, const char *shortstr, size_t len)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
-	if (i == strlen(shortstr))
-		return((char *)bigstr);
+	if (i == ft_strlen(shortstr))
+		return ((char *)bigstr);
 	while (bigstr[i] && i < len)
 	{
 		j = 0;
