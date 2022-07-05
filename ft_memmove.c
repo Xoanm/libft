@@ -15,19 +15,16 @@
 //#include <string.h>
 #include "libft.h"
 
-void	*ft_memmove(void *s1, const void *s2, size_t n)
+void    *ft_memmove(void *dst, const void *src, size_t n)
 {
 	int	i;
 
-	i = ((int)n - 1);
-	if (!s1 && !s2)
+	i = -1;
+	if (!dst && !src)
 		return (NULL);
-	while (i >= 0)
-	{
-		((unsigned char *)s1)[i] = ((unsigned char *)s2)[i];
-		i--;
-	}
-	return (s1);
+	while (++i, i < (int)n)
+		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+	return (dst);
 }
 /*
 int	main(void)
