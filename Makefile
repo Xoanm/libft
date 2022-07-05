@@ -34,6 +34,8 @@ SRCS	=	ft_isascii.c\
 			ft_substr.c\
 			ft_strlcpy.c\
 			ft_strlcat.c\
+			ft_calloc.c\
+			ft_strdup.c\
 
 LIB		=	libft.h
 OBJS	=	${SRCS:.c=.o}

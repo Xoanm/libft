@@ -10,9 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
+# ifndef LIBFT_H
 # define LIBFT_H
 # include <string.h>
+# include <stdlib.h>
 # include <stdio.h>
 # include <ctype.h>
 # include <stdlib.h>
@@ -38,4 +39,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstn);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+void	*ft_calloc(size_t nmemb, size_t size);
+char    *ft_strdup(const char *s1);
 #endif

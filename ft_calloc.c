@@ -15,7 +15,7 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
     char    *ptr;
-    int	    i;
+    size_t  i;
 
     i = 0;
     ptr = (char *)malloc(nmemb * size);
