@@ -6,7 +6,7 @@
 #    By: jumorcil <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/19 11:57:26 by jumorcil          #+#    #+#              #
-#    Updated: 2022/06/27 22:00:35 by jumorcil         ###   ########.fr        #
+#    Updated: 2022/07/07 18:19:33 by jumorcil         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,6 @@ SRCS	=	ft_isascii.c\
 			ft_bzero.c\
 			ft_isprint.c\
 			ft_memset.c\
-			ft_lstnew.c\
 			ft_strchr.c\
 			ft_strnstr.c\
 			ft_strncmp.c\
@@ -31,15 +30,14 @@ SRCS	=	ft_isascii.c\
 			ft_strrchr.c\
 			ft_isalpha.c\
 			ft_memcmp.c\
-			ft_substr.c\
 			ft_strlcpy.c\
 			ft_strlcat.c\
 			ft_calloc.c\
 			ft_strdup.c\
 			ft_putchar_fd.c\
 			ft_putstr_fd.c\
-			ft_putnbr_fd\
-			ft_putendl_fd\
+			ft_putnbr_fd.c\
+			ft_putendl_fd.c\
 
 LIB		=	libft.h
 OBJS	=	${SRCS:.c=.o}
@@ -54,7 +52,6 @@ RM		= 	-rm -f
 
 $(NAME):	$(OBJS) $(LIB)
 	-ar rc $(NAME) $(OBJS)
-	#-ranlib $(NAME)
 
 clean:
 	$(RM) $(OBJS)
