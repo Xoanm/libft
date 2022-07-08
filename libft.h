@@ -41,7 +41,6 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstn);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 void	*ft_calloc(size_t nmemb, size_t size);
-char    *ft_strdup(const char *s1);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
