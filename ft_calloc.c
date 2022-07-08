@@ -20,12 +20,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
     i = 0;
     ptr = (char *)malloc(nmemb * size);
     if (!ptr)
-	return (0);
-    while (i < nmemb)
-    {
-	ptr[i] = 0;
-	i++;
-    }
+	return (NULL);
+    ft_bzero(ptr, ft_strlen(ptr));
     return(ptr);
 }
 /*
