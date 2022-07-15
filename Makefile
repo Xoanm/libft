@@ -40,6 +40,7 @@ SRCS	=	ft_isascii.c\
 			ft_putendl_fd.c\
 			ft_substr.c\
 			ft_strjoin.c\
+			ft_strtrim.c\
 
 LIB		=	libft.h
 OBJS	=	${SRCS:.c=.o}
