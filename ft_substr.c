@@ -20,7 +20,11 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 
     i = start;
     j = 0;
+    if (start >= ft_strlen(s))
+	    return (ft_strdup(""));
     new = (char *)malloc(len + 1);
+    if (!new || !s)
+        return (NULL);
     while (i < len + start)
     {
         new[j] = s[i];
@@ -29,7 +33,6 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     }
     new[j] = '\0';
     return (new);
-
 }
 /*
 int    main(void)

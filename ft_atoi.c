@@ -18,7 +18,7 @@ int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;
-	int	result;
+	long long	result;
 
 	i = 0;
 	sign = 1;
@@ -36,8 +36,13 @@ int	ft_atoi(const char *str)
 		i++;
 	while (str[i] >= 48 && str[i] <= 57 && str[i] != '\0')
 	{
-		result = (result * 10) + (str[i] - 48);
-		i++;
+		if (result * sign > 2147483647)
+			return (-1);
+		else if (result * sign < -2147483648)
+			return (0);
+		else
+			result = (result * 10) + (str[i] - 48);
+			i++;
 	}
 	result *= sign;
 	return (result);

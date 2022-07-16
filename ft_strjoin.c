@@ -20,7 +20,11 @@ char *ft_strjoin(char const *s1, char const *s2)
   
   i = 0;
   j = 0;
+  if (!s1 || !s2)
+    return(NULL);
   new = (char *)malloc(strlen(s1) + strlen(s2) + 1);
+  if (!new)
+    return(NULL);
   while (s1[i] != '\0')
   {
     new[i] = s1[i];
